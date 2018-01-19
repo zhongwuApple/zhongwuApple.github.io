@@ -86,11 +86,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Classification$h_\theta (x) = g(\theta ^Tx)$$z = \theta ^Tx$$g(z) = \frac{1}{1+e^{-z}}$g(z)的图 从图片上看若 $z\to +\infty$;则 $g(z)\to 1$。若 $z\to -\infty$;则 $g(z)\to 0$。 真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$">
 <meta property="og:image" content="http://yoursite.com/images/ML/Classification/Sigmoid.png">
-<meta property="og:image" content="http://yoursite.com/images/MLNote1/LogFunction.png">
-<meta property="og:image" content="http://yoursite.com/images/MLNote1/logz.png">
-<meta property="og:image" content="http://yoursite.com/images/MLNote1/-logz.png">
-<meta property="og:image" content="http://yoursite.com/images/MLNote1/-loghx.png">
-<meta property="og:updated_time" content="2018-01-19T07:23:19.178Z">
+<meta property="og:image" content="http://yoursite.com/images/ML/Classification/LogFunction.png">
+<meta property="og:image" content="http://yoursite.com/images/ML/Classification/LogZ.png">
+<meta property="og:image" content="http://yoursite.com/images/ML/Classification/-logZ.png">
+<meta property="og:image" content="http://yoursite.com/images/ML/Classification/-loghx.png">
+<meta property="og:image" content="http://yoursite.com/images/ML/Classification/1-loghx.png">
+<meta property="og:updated_time" content="2018-01-19T08:59:59.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Classification">
 <meta name="twitter:description" content="Classification$h_\theta (x) = g(\theta ^Tx)$$z = \theta ^Tx$$g(z) = \frac{1}{1+e^{-z}}$g(z)的图 从图片上看若 $z\to +\infty$;则 $g(z)\to 1$。若 $z\to -\infty$;则 $g(z)\to 0$。 真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$">
@@ -306,8 +307,12 @@
       
         <h1 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h1><p>$h_\theta (x) = g(\theta ^Tx)$<br>$z = \theta ^Tx$<br>$g(z) = \frac{1}{1+e^{-z}}$<br>g(z)的图<img src="/images/ML/Classification/Sigmoid.png" alt=""></p>
 <p>从图片上看<br>若 $z\to +\infty$;<br>则 $g(z)\to 1$。<br>若 $z\to -\infty$;<br>则 $g(z)\to 0$。</p>
-<h3 id="真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><a href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0" class="headerlink" title="真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$"></a>真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</h3><p>对于一般分类来说 只存在二种情况 y=1, y=0。 但是我们根据函数$h_\theta (x)$可知它的范围<br>        $ 0&lt; h_\theta (x) &lt; 1。$<br>为了使得  $h_\theta (x) = 1$  $h_\theta (x) = 0$<br>存在k($0&lt;k&lt;1$)<br>当$h_\theta (x) &gt; k$，则 $h_\theta (x) = 1$<br>当$h_\theta (x) &lt; k$，则 $h_\theta (x) = 0$<br>k的取值一般情况看实际项目。一般情况下取 $k = 0.5 $。当 k = 0.5的时候 根据上面图像和g公式 我们可以知道  $0.5 = \frac{1}{1+e^{-z}}$, 可以推断出 z = 0。则可以得出下面的几个结论<br>$ \theta ^Tx &gt;=0 \Rightarrow\ y=1$<br>$ \theta ^Tx &lt;0 \Rightarrow\ y=0$<br>至此 我们可知 通过控制 $\theta ^Tx$ 就可以控制 $h_\theta (x)$的真假。<br></p>
-<h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p>$J(\theta ) = \frac{1}{m}\sum_{i=1}^{m}Cost(h_\theta(x^{(i)}), y^{(i)})<br>$<br>$Cost(h_\theta(x),y) = -log(h_\theta(x))$;  当 $ y = 1 $<br>$Cost(h_\theta(x),y) = -log(1-h_\theta(x))$;  当 $ y = 0 $<br>log正常函数的图像如下 <img src="/images/MLNote1/LogFunction.png" alt=""><br>则 $log(z)$ 图像如下<img src="/images/MLNote1/logz.png" alt=""><br>那么 $-log(z)$的图像相当于 $log(z)$图像相对z轴对称 所以$-log(z)$如图<img src="/images/MLNote1/-logz.png" alt="">最终求出 $Cost(h_\theta(x),y) = -log(h_\theta(x))$图像如下<br><img src="/images/MLNote1/-loghx.png" alt=""><br>绘图有1个隐藏条件 我们绘制 $log(h_\theta(x))$函数图像的时候 log 的底数是 &gt; 1的。也就是 a &gt; 1。<br>根据-$log(h_\theta(x))$图像可以知道 当 $h_\theta(x)=1, y = 1$,则$Cost = 0$<br>当 $h_\theta(x)\to 0$, $Cost\to + \infty$。</p>
+<h2 id="真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><a href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0" class="headerlink" title="真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$"></a>真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</h2><p>对于一般分类来说 只存在二种情况 y=1, y=0。 但是我们根据函数$h_\theta (x)$可知它的范围<br>        $ 0&lt; h_\theta (x) &lt; 1。$<br>为了使得  $h_\theta (x) = 1$  $h_\theta (x) = 0$<br>存在k($0&lt;k&lt;1$)<br>当$h_\theta (x) &gt; k$，则 $h_\theta (x) = 1$<br>当$h_\theta (x) &lt; k$，则 $h_\theta (x) = 0$<br>k的取值一般情况看实际项目。一般情况下取 $k = 0.5 $。当 k = 0.5的时候 根据上面图像和g公式 我们可以知道  $0.5 = \frac{1}{1+e^{-z}}$, 可以推断出 z = 0。则可以得出下面的几个结论<br>$ \theta ^Tx &gt;=0 \Rightarrow\ y=1$<br>$ \theta ^Tx &lt;0 \Rightarrow\ y=0$<br>至此 我们可知 通过控制 $\theta ^Tx$ 就可以控制 $h_\theta (x)$的真假。<br></p>
+<h2 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h2><p>$J(\theta ) = \frac{1}{m}\sum_{i=1}^{m}Cost(h_\theta(x^{(i)}), y^{(i)})<br>$<br>$Cost(h_\theta(x),y) = -log(h_\theta(x))$;  当 $ y = 1 $<br>$Cost(h_\theta(x),y) = -log(1-h_\theta(x))$;  当 $ y = 0 $<br>log正常函数的图像如下 <img src="/images/ML/Classification/LogFunction.png" alt=""><br>则 $log(z)$ 图像如下<img src="/images/ML/Classification/LogZ.png" alt=""><br>那么 $-log(z)$的图像相当于 $log(z)$图像相对z轴对称 所以$-log(z)$如图<img src="/images/ML/Classification/-logZ.png" alt="">最终求出 $Cost(h_\theta(x),y) = -log(h_\theta(x))$图像如下<br><img src="/images/ML/Classification/-loghx.png" alt="">       </p>
+<p>$Cost(h_\theta(x),y) = -log(1-h_\theta(x))$;  函数图像如下<br><img src="/images/ML/Classification/1-loghx.png" alt=""></p>
+<p>绘图有1个隐藏条件 我们绘制 $log(h_\theta(x))$函数图像的时候 log 的底数是 &gt; 1的。也就是 a &gt; 1。<br><br>总结上2图，得出<br>当$y=0$且$h_\theta(x) \to 1$ 那么$ Cost(h_\theta(x), y) \to \infty $<br>当$y=1$且$h_\theta(x) \to 0$ 那么$ Cost(h_\theta(x), y) \to \infty $</p>
+<p>因为y的不同值会产生2种不同的 $J(\theta)$，但是这2个函数可以合并成一个表达式<br>$Cost(h_\theta(x), y) = -y log(h_\theta(x)) - (1-y)log(1-h_\theta(x))$<br>$J(\theta ) = -\frac{1}{m}\sum_{i=1}^{m}[y^{(i)} log(h_\theta(x^{(i)})) + (1-y^{(i)})log(1-h_\theta(x^{(i)})) ]$<br>如果是向量的实现代码如下<br>$h = g(X\theta)$<br>$J(\theta) = \frac{1}{m}.(-y^T log(h) - (1-y)^T log(1-h))$</p>
+<h2 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h2><p>$\theta_j := \theta_j - \alpha \frac{\vartheta}{\vartheta\theta_j}  $<br>计算公式如下<br>$\theta_j := \theta_j -  \frac{\alpha}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}  $<br>如果用向量实现<br>$\theta := \theta - \frac{a}{m}X^T(g(X \Theta) - \vec{y})$</p>
 
       
     </div>
@@ -332,8 +337,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/15/MLNote/MLNote1/" rel="next" title="机器学习笔记 1">
-                <i class="fa fa-chevron-left"></i> 机器学习笔记 1
+              <a href="/2018/01/15/SVM/SVM1/" rel="next" title="SVM 1">
+                <i class="fa fa-chevron-left"></i> SVM 1
               </a>
             
           </div>
@@ -342,8 +347,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/15/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/15/MLNote/MLNote1/" rel="prev" title="机器学习笔记 1">
+                机器学习笔记 1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -458,7 +463,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Classification"><span class="nav-number">1.</span> <span class="nav-text">Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><span class="nav-number">1.0.1.</span> <span class="nav-text">真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function"><span class="nav-number">1.0.2.</span> <span class="nav-text">Cost Function</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Classification"><span class="nav-number">1.</span> <span class="nav-text">Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><span class="nav-number">1.1.</span> <span class="nav-text">真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cost-Function"><span class="nav-number">1.2.</span> <span class="nav-text">Cost Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">1.3.</span> <span class="nav-text">Gradient Descent</span></a></li></ol></li></ol></div>
             
 
           </div>
