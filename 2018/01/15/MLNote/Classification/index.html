@@ -79,12 +79,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Classification$h_\theta (x) = g(\theta ^Tx)$$z = \theta ^Tx$$g(z) = \frac{1}{1+e^{-z}}$g(z)的图 从图片上看若 $z\to +\infty$;则 $g(z)\to 1$。若 $z\to -\infty$;则 $g(z)\to 0$。 真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Classification">
+<meta property="og:url" content="http://yoursite.com/2018/01/15/MLNote/Classification/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Classification$h_\theta (x) = g(\theta ^Tx)$$z = \theta ^Tx$$g(z) = \frac{1}{1+e^{-z}}$g(z)的图 从图片上看若 $z\to +\infty$;则 $g(z)\to 1$。若 $z\to -\infty$;则 $g(z)\to 0$。 真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$">
+<meta property="og:image" content="http://yoursite.com/images/MLNote1/classification1.png">
+<meta property="og:image" content="http://yoursite.com/images/MLNote1/LogFunction.png">
+<meta property="og:image" content="http://yoursite.com/images/MLNote1/logz.png">
+<meta property="og:image" content="http://yoursite.com/images/MLNote1/-logz.png">
+<meta property="og:image" content="http://yoursite.com/images/MLNote1/-loghx.png">
+<meta property="og:updated_time" content="2018-01-18T10:50:09.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Classification">
+<meta name="twitter:description" content="Classification$h_\theta (x) = g(\theta ^Tx)$$z = \theta ^Tx$$g(z) = \frac{1}{1+e^{-z}}$g(z)的图 从图片上看若 $z\to +\infty$;则 $g(z)\to 1$。若 $z\to -\infty$;则 $g(z)\to 0$。 真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$">
+<meta name="twitter:image" content="http://yoursite.com/images/MLNote1/classification1.png">
 
 
 
@@ -114,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/15/MLNote/Classification/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Classification | Hexo</title>
   
 
 
@@ -139,8 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,135 +222,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T17:36:50+08:00">
-                2018-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Markdown-语法和-MWeb-写作使用说明"><a href="#Markdown-语法和-MWeb-写作使用说明" class="headerlink" title="Markdown 语法和 MWeb 写作使用说明"></a>Markdown 语法和 MWeb 写作使用说明</h1><h2 id="Markdown-的设计哲学"><a href="#Markdown-的设计哲学" class="headerlink" title="Markdown 的设计哲学"></a>Markdown 的设计哲学</h2><blockquote>
-<p>Markdown 的目標是實現「易讀易寫」。<br>不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。<br>Markdown 的語法有個主要的目的：用來作為一種網路內容的<em>寫作</em>用語言。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/15/hello-world/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -371,9 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/MLNote/Classification/" itemprop="url">Classification</a></h1>
+          <h1 class="post-title" itemprop="name headline">Classification</h1>
         
 
         <div class="post-meta">
@@ -423,15 +304,11 @@
       
 
       
-        
-          
-            <h1 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h1><p>$h_\theta (x) = g(\theta ^Tx)$<br>$z = \theta ^Tx$<br>$g(z) = \frac{1}{1+e^{-z}}$<br>g(z)的图<img src="/images/MLNote1/classification1.png" alt=""></p>
+        <h1 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h1><p>$h_\theta (x) = g(\theta ^Tx)$<br>$z = \theta ^Tx$<br>$g(z) = \frac{1}{1+e^{-z}}$<br>g(z)的图<img src="/images/MLNote1/classification1.png" alt=""></p>
 <p>从图片上看<br>若 $z\to +\infty$;<br>则 $g(z)\to 1$。<br>若 $z\to -\infty$;<br>则 $g(z)\to 0$。</p>
 <h3 id="真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><a href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0" class="headerlink" title="真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$"></a>真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</h3><p>对于一般分类来说 只存在二种情况 y=1, y=0。 但是我们根据函数$h_\theta (x)$可知它的范围<br>        $ 0&lt; h_\theta (x) &lt; 1。$<br>为了使得  $h_\theta (x) = 1$  $h_\theta (x) = 0$<br>存在k($0&lt;k&lt;1$)<br>当$h_\theta (x) &gt; k$，则 $h_\theta (x) = 1$<br>当$h_\theta (x) &lt; k$，则 $h_\theta (x) = 0$<br>k的取值一般情况看实际项目。一般情况下取 $k = 0.5 $。当 k = 0.5的时候 根据上面图像和g公式 我们可以知道  $0.5 = \frac{1}{1+e^{-z}}$, 可以推断出 z = 0。则可以得出下面的几个结论<br>$ \theta ^Tx &gt;=0 \Rightarrow\ y=1$<br>$ \theta ^Tx &lt;0 \Rightarrow\ y=0$<br>至此 我们可知 通过控制 $\theta ^Tx$ 就可以控制 $h_\theta (x)$的真假。<br></p>
 <h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p>$J(\theta ) = \frac{1}{m}\sum_{i=1}^{m}Cost(h_\theta(x^{(i)}), y^{(i)})<br>$<br>$Cost(h_\theta(x),y) = -log(h_\theta(x))$;  当 $ y = 1 $<br>$Cost(h_\theta(x),y) = -log(1-h_\theta(x))$;  当 $ y = 0 $<br>log正常函数的图像如下 <img src="/images/MLNote1/LogFunction.png" alt=""><br>则 $log(z)$ 图像如下<img src="/images/MLNote1/logz.png" alt=""><br>那么 $-log(z)$的图像相当于 $log(z)$图像相对z轴对称 所以$-log(z)$如图<img src="/images/MLNote1/-logz.png" alt="">最终求出 $Cost(h_\theta(x),y) = -log(h_\theta(x))$图像如下<br><img src="/images/MLNote1/-loghx.png" alt=""><br>绘图有1个隐藏条件 我们绘制 $log(h_\theta(x))$函数图像的时候 log 的底数是 &gt; 1的。也就是 a &gt; 1。<br>根据-$log(h_\theta(x))$图像可以知道 当 $h_\theta(x)=1, y = 1$,则$Cost = 0$<br>当 $h_\theta(x)\to 0$, $Cost\to + \infty$。</p>
 
-          
-        
       
     </div>
     
@@ -448,134 +325,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/15/MLNote/MLNote1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/MLNote/MLNote1/" itemprop="url">机器学习笔记 1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T17:36:50+08:00">
-                2018-01-15
-              </time>
+              <a href="/2018/01/15/MLNote/MLNote1/" rel="next" title="机器学习笔记 1">
+                <i class="fa fa-chevron-left"></i> 机器学习笔记 1
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2018/01/15/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="机器学习-h-theta-x"><a href="#机器学习-h-theta-x" class="headerlink" title="机器学习 $h_\theta (x)$"></a>机器学习 $h_\theta (x)$</h1><p>如图 <img src="/images/MLNote1/1.png" alt=""><br>如图 <img src="/images/MLNote1/2.png" alt=""></p>
-<p>我们的目的就是要找出一个函数$h_\theta (x)$ 然后通过函数 $h_\theta (x)$，我们就能预测出我们想要的结果。 比如ng视频经常提到的预测房价的函数, 癌症判断函数等等。未来找到这样的函数。我们需要应用很多步骤和数学技巧。这篇里面主要记录回归问题。</p>
-<p>$h_\theta (x)$ 函数上的红点是训练数据的样本。也就是说 我们通过相对少量(对整个函数无数个点来说 红点算少了)样本，训练出最终函数$h_\theta (x)$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -585,253 +360,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/15/SVM/SVM1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/SVM/SVM1/" itemprop="url">SVM 1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T17:36:50+08:00">
-                2018-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="决策线-theta-间距之间的关系"><a href="#决策线-theta-间距之间的关系" class="headerlink" title="决策线 $\theta$ 间距之间的关系"></a>决策线 $\theta$ 间距之间的关系</h2><ul>
-<li>$\theta$ 与 决策界是 90度正交的。通过这个特效 可以知道P的间距。</li>
-<li>当 $\theta$ = 0 的时候，决策线是经过原点的。</li>
-<li>p dot || $\theta$ || &gt;= 1 , p dot || $\theta$ || &lt;= -1 这些情况下。我们的目的是使得$\theta$较小，那么根据这些情况 只能 p 变大。 重图像来看，就是  p 的距离会变大，通过 p的距离可以调整决策线的画法。(p 可以表示正样本和负样本距离决策线的距离。</li>
-</ul>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/15/Spam/Spam/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/Spam/Spam/" itemprop="url">垃圾邮件分类</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T17:36:50+08:00">
-                2018-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="垃圾邮件分类-偏差大的数据"><a href="#垃圾邮件分类-偏差大的数据" class="headerlink" title="垃圾邮件分类 偏差大的数据"></a>垃圾邮件分类 偏差大的数据</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -839,6 +372,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -859,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -902,6 +448,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Classification"><span class="nav-number">1.</span> <span class="nav-text">Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#真假判断-y-1-y-0-。-h-theta-x-1-h-theta-x-0"><span class="nav-number">1.0.1.</span> <span class="nav-text">真假判断 $y =1$; $y=0$。 $h_\theta (x) = 1$; $h_\theta (x) = 0$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function"><span class="nav-number">1.0.2.</span> <span class="nav-text">Cost Function</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1035,6 +597,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
